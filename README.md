@@ -16,3 +16,13 @@ conda create -n tf_inversion python=3.10
 conda activate TFinv
 
 pip install -r requirements.txt
+
+
+## 🛠️ Inversion
+
+python inversion.py
+
+
+## 🛠️ Editing
+
+python edit.py
