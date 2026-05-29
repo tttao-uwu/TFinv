@@ -32,8 +32,11 @@ Invert an input image into the latent space of the one-step diffusion model.
 
 ```bash
 python inversion.py \
-    --image_path examples/input.png \
-    --output_dir results/inversion
+    --path_img_input examples/input.png \
+    --inversion_update_steps 600 \ 
+    --path_latents_update "save/weight" \
+    --path_tokens_update "save/weight" 
+
 ```
 
 ### Step 2: Image Editing
@@ -42,26 +45,13 @@ Apply text-guided edits using the inverted latent.
 
 ```bash
 python edit.py \
-    --latent_path results/inversion/latent.pt \
-    --prompt "a cyberpunk style portrait" \
-    --output_dir results/edit
+    --path_latents_update "save/weight" \
+    --path_tokens_update "save/weight" \
+    --caption 'A meerkat wrapped in a blue towel A*' \
+    --edit_caption 'A lion wrapped in a blue towel A*'
+    --path_imgs_p2p "save/edit"
 ```
 
----
-
-## 📁 Project Structure
-
-```
-TFinv/
-├── inversion.py        # Image inversion script
-├── edit.py             # Image editing script
-├── examples/
-│   └── input.png       # Example input image
-├── results/
-│   ├── inversion/      # Inversion outputs
-│   └── edit/           # Editing outputs
-└── requirements.txt    # Python dependencies
-```
 
 ---
 
@@ -73,7 +63,7 @@ If you find this work useful, please cite:
 @article{tfinv2024,
   title     = {Training-Free Image Inversion for One-Step Diffusion Models},
   author    = {Your Name},
-  year      = {2024},
+  year      = {2026},
 }
 ```
 
