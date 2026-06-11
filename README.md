@@ -60,10 +60,14 @@ python edit.py \
 If you find this work useful, please cite:
 
 ```bibtex
-@article{tfinv2024,
-  title     = {Training-Free Image Inversion for One-Step Diffusion Models},
-  author    = {Your Name},
-  year      = {2026},
+@article{wu2026tfinv,
+  title   = {Training-Free Image Inversion for One-Step Diffusion Models},
+  author  = {Wu, Tao and Li, Senmao and Wang, Yaxing and Yang, Shiqi and Wang, Kai and van de Weijer, Joost},
+  journal = {Pattern Recognition},
+  volume  = {180},
+  pages   = {114063},
+  year    = {2026},
+  doi     = {10.1016/j.patcog.2026.114063}
 }
 ```
 
